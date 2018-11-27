@@ -13,10 +13,10 @@ if (startGame === 'START') {
 }
 
 // Player lives
-// to do
+// todo
 
 // Player inventory 
-// to do
+// todo
 
 // Game Function 1: Choosing the path.
 function beginGame() {
@@ -37,7 +37,7 @@ function beginGame() {
 
 // Game Function 2: The Forest: Part 1.
 function beginForest() {
-  let userSpeechForest = prompt("You are in the great Deku Forest! You ").toUpperCase();
+  let userSpeechForest = prompt("You are in the great Deku Forest! You find the great Deku Tree and you are asked to take on the Forest Temple... \n * Yes \n * No").toUpperCase();
 }
 
 // Game Function 2: The Forest: Part 2.
