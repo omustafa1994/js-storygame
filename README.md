@@ -1,31 +1,24 @@
-# js-storygame-
+# js-storygame
+### Description
+This is so far a maze game with a legend of zelda theme done using javascript.
 
-Description
+### Languages used
+* HTML
+* Javascript
 
-As a team we made a netflix adaptaion with working videos.
 
-Languages used
+### How to download
+1. Clone the repo
+2. Paste the git clone line in terminal that github gives you
 
-HTML
-CSS
-How to download
 
-Clone the repo
-Paste the git clone line in terminal that github gives you
 (If its hosted on Github Pages then...)
+#### You can view the page [here]()
 
-You can view the page here
+### Challenges (you can include images and code block here)
+1. Difficulty only sticking to prompt and alert 
+2. Couldn't get a working inventory system
+3. Couldn't get a working lives system
 
-Challenges (you can include images and code block here)
-
-Merge conflicts
-Empty links / File pathing
-Naming conventions
-Minor consistency
-Bootstrap technical issues
-Learning points
-
-Need to learn how to deal with merge conflicts
-Probably better if files were precreated and then merged
-Everyone's Bootstrap should be from the same source
-Limited use without Javascript
+### Learning points
+1. Javascript is so loosely typed that many errors were made during coding 
