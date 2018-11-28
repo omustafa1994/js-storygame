@@ -5,6 +5,13 @@ const playerName = prompt("Welcome adventurer! what is your name?").toUpperCase(
 // Greet player and prompt to start adventure.
 let startGame = prompt("Hello " + playerName + ", let's begin! Type 'start' to begin!").toUpperCase();
 
+// Player inventory 
+const inventory = [];
+const winningCond = [' Grass stone', ' Fire stone', ' Water stone']
+
+// Player lives
+// todo
+
 // Player must type start to continue. 
 if (startGame === 'START') {
   beginGame();
@@ -12,26 +19,30 @@ if (startGame === 'START') {
   exit();
 }
 
-// Player lives
-// todo
-
-// Player inventory 
-// todo
-
 // ***********************************************************************************************************************
 // Game Function: Choosing the path.
 // ***********************************************************************************************************************
 function beginGame() {
-  let userDirection = prompt("You are walking down a long narrow road and approach a split road, there are three signs... \n * Left to the magical forest \n * Right to the treacherous volcano \n * Forward to the majestic ocean").toUpperCase();
+  let userDirection = prompt("You are walking down a long narrow road and approach a split road, there are three signs... \n * Left to the magical forest \n * Right to the treacherous volcano \n * Straight to the majestic ocean \n *** Check inventory?").toUpperCase();
   if (userDirection === 'LEFT') {
     alert("The magical forest.");
     beginForest();
   } else if (userDirection === 'RIGHT') {
     alert("The treacherous volcano.");
     beginVolcano();
-  } else if (userDirection === 'FORWARD') {
+  } else if (userDirection === 'STRAIGHT') {
     alert("The majestic ocean.");
     beginOcean();
+    // User can check their inventory
+  } else if (userDirection === 'CHECK') {
+    alert(inventory.toString());
+    // How to win, collect all 3 stones
+    if (inventory === winningCond) {
+      alert("YOU WIN!!!");
+    } else {
+      beginGame();
+    }
+    beginGame();
   } else {
     beginGame();
   }
@@ -58,7 +69,8 @@ function beginForestTemple() {
     if (userSearchForest === 'D') { // second direction
       let userSearchForest = prompt("Keep going! \n W - up \n A - left \n S - down \n D - right").toUpperCase();
       if (userSearchForest === 'W') { // third direction
-        alert("You found the Grass stone!")
+        alert("You found the Grass stone!");
+        inventory.push(" Grass stone");
         beginForestEnd();
       } else {
         alert("You got lost.");
@@ -89,7 +101,7 @@ function beginForestEnd() {
 // Game Function: The Volcano: Part 1.
 // ***********************************************************************************************************************
 function beginVolcano() {
-  let userSpeechVolcano = prompt("You are in the great Treacherous Volcano! You find the great Goron Leader and you are asked to take on the Fire Temple... \n * Yes \n * No").toUpperCase();
+  let userSpeechVolcano = prompt("You are at the great Treacherous Volcano! You find the great Goron Leader and you are asked to take on the Fire Temple... \n * Yes \n * No").toUpperCase();
   if (userSpeechVolcano === 'YES') {
     alert("You enter the fire temple.");
     beginVolcanoTemple();
@@ -107,6 +119,7 @@ function beginVolcanoTemple() {
       let userSearchVolcano = prompt("Keep going! \n W - up \n A - left \n S - down \n D - right").toUpperCase();
       if (userSearchVolcano === 'W') { // third direction
         alert("You found the Fire stone!")
+        inventory.push(" Fire stone")
         beginVolcanoEnd();
       } else {
         alert("You got lost.");
@@ -137,7 +150,7 @@ function beginVolcanoEnd() {
 // Game Function: The Ocean: Part 1.
 // ***********************************************************************************************************************
 function beginOcean() {
-  let userSpeechOcean = prompt("You are in the great Majestic Ocean! You find the great Zora King and you are asked to take on the Water Temple... \n * Yes \n * No").toUpperCase();
+  let userSpeechOcean = prompt("You are at the great Majestic Ocean! You find the great Zora King and you are asked to take on the Water Temple... \n * Yes \n * No").toUpperCase();
   if (userSpeechOcean === 'YES') {
     alert("You enter the water temple.");
     beginOceanTemple();
@@ -155,6 +168,7 @@ function beginOceanTemple() {
       let userSearchOcean = prompt("Keep going! \n W - up \n A - left \n S - down \n D - right").toUpperCase();
       if (userSearchOcean === 'W') { // third direction
         alert("You found the Water stone!")
+        inventory.push(" Water stone")
         beginOceanEnd();
       } else {
         alert("You got lost.");
@@ -180,3 +194,7 @@ function beginOceanEnd() {
     exit();
   }
 }
+
+// ***********************************************************************************************************************
+// Game Function: The Finale.
+// ***********************************************************************************************************************
