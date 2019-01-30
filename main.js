@@ -7,10 +7,7 @@ let startGame = prompt("Hello " + playerName + ", let's begin! Type 'start' to b
 
 // Player inventory 
 const inventory = [];
-const winningCond = [' Grass stone', ' Fire stone', ' Water stone']
-
-// Player lives
-// todo
+const winningCond = ["Grass stone","Fire stone","Water stone"]
 
 // Player must type start to continue. 
 if (startGame === 'START') {
@@ -37,7 +34,7 @@ function beginGame() {
   } else if (userDirection === 'CHECK') {
     alert(inventory.toString());
     // How to win, collect all 3 stones
-    if (inventory === winningCond) {
+    if (inventory === "Grass stone","Fire stone","Water stone") {
       alert("YOU WIN!!!");
     } else {
       beginGame();
@@ -70,7 +67,7 @@ function beginForestTemple() {
       let userSearchForest = prompt("Keep going! \n W - up \n A - left \n S - down \n D - right").toUpperCase();
       if (userSearchForest === 'W') { // third direction
         alert("You found the Grass stone!");
-        inventory.push(" Grass stone");
+        inventory.push("Grass stone");
         beginForestEnd();
       } else {
         alert("You got lost.");
@@ -119,7 +116,7 @@ function beginVolcanoTemple() {
       let userSearchVolcano = prompt("Keep going! \n W - up \n A - left \n S - down \n D - right").toUpperCase();
       if (userSearchVolcano === 'W') { // third direction
         alert("You found the Fire stone!")
-        inventory.push(" Fire stone")
+        inventory.push("Fire stone")
         beginVolcanoEnd();
       } else {
         alert("You got lost.");
@@ -168,7 +165,7 @@ function beginOceanTemple() {
       let userSearchOcean = prompt("Keep going! \n W - up \n A - left \n S - down \n D - right").toUpperCase();
       if (userSearchOcean === 'W') { // third direction
         alert("You found the Water stone!")
-        inventory.push(" Water stone")
+        inventory.push("Water stone")
         beginOceanEnd();
       } else {
         alert("You got lost.");
