@@ -7,7 +7,6 @@ let startGame = prompt("Hello " + playerName + ", let's begin! Type 'start' to b
 
 // Player inventory 
 const inventory = [];
-const winningCond = ["Grass stone","Fire stone","Water stone"]
 
 // Player must type start to continue. 
 if (startGame === 'START') {
@@ -32,9 +31,9 @@ function beginGame() {
     beginOcean();
     // User can check their inventory
   } else if (userDirection === 'CHECK') {
-    alert(inventory.toString());
+    alert(inventory);
     // How to win, collect all 3 stones
-    if (inventory === "Grass stone","Fire stone","Water stone") {
+    if (inventory.length === 3) {
       alert("YOU WIN!!!");
     } else {
       beginGame();

@@ -1,24 +1,21 @@
-# js-storygame
+# Legend of Zelda - Maze Game
+
 ### Description
-This is so far a maze game with a legend of zelda theme done using javascript.
+This text-based maze game was created using interactions like prompt and alert. With the main purpose of interaction with the user, it serves as an adventure/puzzle game with the theme from the classic N64 Zelda Ocarina of Time. 
 
 ### Languages used
-* HTML
 * Javascript
-
+* HTML
 
 ### How to download
-1. Clone the repo
-2. Paste the git clone line in terminal that github gives you
+1. Clone the Git repo
+2. Open the files and run index.html file
+3. You will now be able to play the game!
 
-
-(If its hosted on Github Pages then...)
-#### You can view the page [here]()
-
-### Challenges (you can include images and code block here)
-1. Difficulty only sticking to prompt and alert 
-2. Couldn't get a working inventory system
-3. Couldn't get a working lives system
+### Challenges
+1. Difficulty with restrictions only using interaction commands
+2. Couldn't get a working inventory system to expected result
+3. Couldn't get a working live system
 
 ### Learning points
-1. Javascript is so loosely typed that many errors were made during coding 
+1. Javascript is so loosely typed language so caution when coding 
