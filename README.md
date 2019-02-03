@@ -15,7 +15,7 @@ This text-based maze game was created using interactions like prompt and alert. 
 ### Challenges
 1. Difficulty with restrictions only using interaction commands
 2. Couldn't get a working inventory system to expected result
-3. Couldn't get a working live system
+3. Couldn't get a working lives system
 
 ### Learning points
 1. Javascript is so loosely typed language so caution when coding 
