@@ -18,4 +18,4 @@ This text-based maze game was created using interactions like prompt and alert. 
 3. Couldn't get a working lives system
 
 ### Learning points
-1. Javascript is so loosely typed language so plenty of trial and error was involved 
+1. Javascript is a loosely typed language so plenty of trial and error was involved 
